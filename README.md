@@ -27,8 +27,8 @@ has_many : members
 
 | Column | Type | Options |
 | ------ | ---- | ------- |
-| group_name | string | index : true, null : false, unique : true |
-| group_mail | string | null : false |
+| name | string | index : true, null : false, unique : true |
+
 
 ### Association
 has_many : users, through : members
