@@ -18,8 +18,8 @@
       .right-header
         .right-header__button
           Edit
-   .messages
-      = render @messages
+    .messages
+      = render partial: 'message', collection: @messages
 
     .form
       = form_for [@group, @message] do |f|
