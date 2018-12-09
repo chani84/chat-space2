@@ -1,11 +1,6 @@
 $(function() {
 
   function buildHTML(message){
-   //  if ( message.image ) {
-   //    var image = `<asset_path src=${message.image} >`;
-   // } else {
-   //    var image = ``;
-   // };
 
    var image = message.image ? `<asset_path src=${message.image} >` : ``;
 
