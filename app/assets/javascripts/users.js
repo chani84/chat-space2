@@ -1,7 +1,7 @@
 $(function(){
 
   var search_user = $("#user-search-result");
-  var add_user= $("#chat-group-users");
+
 
   function appendUser(user) {
     var html = `<div class="chat-group-user clearfix">
@@ -31,6 +31,7 @@ $(function(){
 
     .done(function(users) {
       $("#user-search-result").empty();
+      console.log(this)
         if(users.length !== 0) {
           users.forEach(function(user){
             appendUser(user);
@@ -44,6 +45,8 @@ $(function(){
       alert('ユーザー検索に失敗しました');
     })
   });
+
+  var add_user= $(".chat-group-users");
 
   function appendAddUser(user_id, user_name) {
     var html = `<div class="chat-group-user clearfix">
@@ -59,7 +62,7 @@ $(function(){
     appendAddUser(user_id, user_name);
   });
 
-  $("#chat-group-users").on("click", ".user-search-add", function() {
+  $(".chat-group-users").on("click", ".user-search-add", function() {
     $(this).parent().remove();
   });
 });
